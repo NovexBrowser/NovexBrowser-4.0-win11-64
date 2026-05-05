@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novex Browser</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="wingx-ui.css" />
+</head>
+<body class="ui-theme-wingx ui-animation-soft ui-wingx-active wingx-code-ui real-ui-active">
+  <div class="app-shell">
+
+    <aside class="sidebar real-ui-sidebar">
+      <img src="assets/novex-logo.png" class="brand-logo" alt="Novex Logo" />
+
+      <button class="side-btn active" id="homeSideBtn" title="Dashboard">⌂</button>
+      <button class="side-btn" id="favoritesSideBtn" title="Favoritos">★</button>
+      <button class="side-btn" id="historySideBtn" title="Historial">⏱</button>
+      <button class="side-btn" id="downloadsSideBtn" title="Descargas">↓</button>
+
+      <button class="side-btn" id="toolsGroupToggleBtn" title="Apps y herramientas">🧩</button>
+
+      <div class="sidebar-collapsible hidden" id="toolsGroupContainer">
+        <button class="side-btn" id="masterCenterSideBtn" title="Centro Maestro">👑</button>
+        <button class="side-btn app-side-btn" id="whatsappSideBtn" title="WhatsApp">
+          <img src="https://www.google.com/s2/favicons?domain=whatsapp.com&sz=64" alt="WhatsApp" />
+        </button>
+        <button class="side-btn app-side-btn" id="spotifySideBtn" title="Spotify">
+          <img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" alt="Spotify" />
+        </button>
+        <button class="side-btn app-side-btn" id="robloxSideBtn" title="Roblox">
+          <img src="https://www.google.com/s2/favicons?domain=roblox.com&sz=64" alt="Roblox" />
+        </button>
+        <button class="side-btn" id="gamesSideBtn" title="Juegos">🎮</button>
+        <button class="side-btn" id="securitySideBtn" title="Seguridad">🛡</button>
+        <button class="side-btn" id="quickSearchSideBtn" title="Búsqueda rápida">🔎</button>
+        <button class="side-btn" id="tabManagerSideBtn" title="Gestor de pestañas">▦</button>
+        <button class="side-btn" id="notesSideBtn" title="Notas y tareas">📝</button>
+        <button class="side-btn" id="proFeaturesSideBtn" title="Funciones Pro">✨</button>
+        <button class="side-btn" id="uiCenterSideBtn" title="Centro UI">🎨</button>
+        <button class="side-btn" id="gxControlSideBtn" title="Control GX">🔥</button>
+        <button class="side-btn" id="extremePerfSideBtn" title="Rendimiento extremo">⚡</button>
+      </div>
+
+      <button class="side-btn" id="settingsSideBtn" title="Configuración">⚙</button>
+
+      <div class="sidebar-bottom">
+        <button class="side-btn" id="profileSideBtn" title="Perfil">👤</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+
+      <div class="titlebar">
+        <div class="brand-text">
+          <img src="assets/novex-logo.png" class="mini-logo" alt="Novex Logo" />
+          <span class="brand-gradient">NOVEX</span>
+          <span class="brand-light"> BROWSER</span>
+        </div>
+
+        <div class="window-controls">
+          <button id="minimizeBtn" class="window-btn">—</button>
+          <button id="maximizeBtn" class="window-btn">□</button>
+          <button id="closeBtn" class="window-btn close">✕</button>
+        </div>
+      </div>
+
+      <div class="tabbar" id="tabbar">
+        <button class="new-tab-btn" id="newTabBtn">+</button>
+      </div>
+
+      <div class="toolbar">
+        <button id="back" class="tool-btn">←</button>
+        <button id="forward" class="tool-btn">→</button>
+        <button id="reload" class="tool-btn">⟳</button>
+        <button id="home" class="tool-btn">⌂</button>
+
+        <div class="address-wrapper">
+          <span class="lock-icon">🔒</span>
+          <input id="urlInput" type="text" placeholder="Buscar o escribir una dirección" />
+          <button id="favoriteBtn" class="inline-btn">☆</button>
+        </div>
+
+        <button id="go" class="go-btn">Ir</button>
+        <button id="menuBtn" class="tool-btn">⋮</button>
+      </div>
+
+      <section class="content-area" id="contentArea">
+
+        
+        <div id="startPage" class="start-page novex-real-dashboard">
+          <div class="real-dashboard-grid">
+
+            <section class="real-left-panel real-glass-card">
+              <div class="real-panel-head">
+                <div>
+                  <span>Control</span>
+                  <h2>Control GX</h2>
+                </div>
+                <button class="real-icon-btn" id="dashboardGxBtn" title="Abrir Control GX">↗</button>
+              </div>
+
+              <div class="real-meter-stack">
+                <div class="real-meter-card meter-pink">
+                  <div class="real-ring">
+                    <strong id="homeCpuStatus">--%</strong>
+                    <small>Load</small>
+                  </div>
+                  <div class="real-meter-info">
+                    <h3>CPU</h3>
+                    <p>Uso actual</p>
+                    <div class="real-sparkline"></div>
+                  </div>
+                </div>
+
+                <div class="real-meter-card meter-purple">
+                  <div class="real-ring">
+                    <strong id="homeRamStatus">--</strong>
+                    <small>RAM</small>
+                  </div>
+                  <div class="real-meter-info">
+                    <h3>RAM</h3>
+                    <p>Memoria del sistema</p>
+                    <div class="real-sparkline"></div>
+                  </div>
+                </div>
+
+
+                <div class="real-meter-card meter-green">
+                  <div class="real-ring">
+                    <strong id="homeGpuStatus">--</strong>
+                    <small>GPU</small>
+                  </div>
+                  <div class="real-meter-info">
+                    <h3>GPU</h3>
+                    <p>Proceso gráfico</p>
+                    <div class="real-sparkline"></div>
+                  </div>
+                </div>
+
+                <div class="real-meter-card meter-blue">
+                  <div class="real-ring">
+                    <strong id="homeAppRamStatus">--</strong>
+                    <small>Novex</small>
+                  </div>
+                  <div class="real-meter-info">
+                    <h3>Novex</h3>
+                    <p>Uso del navegador</p>
+                    <div class="real-sparkline"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="real-slider-box">
+                <label><span>Límite RAM</span><b>2.50 GB</b></label>
+                <input type="range" min="1" max="16" value="3" />
+                <label><span>Límite CPU</span><b>85%</b></label>
+                <input type="range" min="10" max="100" value="85" />
+                <label><span>Límite de red</span><b>25 Mbps</b></label>
+                <input type="range" min="1" max="100" value="25" />
+              </div>
+
+              <div class="real-left-actions">
+                <button class="settings-action" id="homeToggleRamSaverBtn">Ahorro RAM</button>
+                <button class="settings-action" id="homeToggleBatterySaverBtn">Batería</button>
+                <button class="settings-action" id="homeToggleStatusbarBtn">Barra inferior</button>
+                <button class="settings-action" id="homeOpenAppsBtn">Apps</button>
+              </div>
+
+              <div class="real-mode-footer">
+                <span>Modo gaming</span>
+                <strong>Activado</strong>
+              </div>
+            </section>
+
+            <section class="real-center-panel">
+              <div class="real-search-block real-glass-card">
+                <div class="big-search real-search-bar">
+                  <span>🔎</span>
+                  <input id="homeSearchInput" type="text" placeholder="Buscar en la web" />
+                  <button class="real-search-btn" title="Buscar">⌕</button>
+                </div>
+
+                <div class="real-chip-row">
+                  <button class="active">Todo</button>
+                  <button>Trabajo</button>
+                  <button>Video</button>
+                  <button>Chat</button>
+                  <button>Dev</button>
+                  <button>+</button>
+                </div>
+
+                <div class="real-widget-grid">
+                  <article class="real-widget-card">
+                    <div class="real-widget-top">
+                      <strong>Clima</strong>
+                      <button>···</button>
+                    </div>
+                    <div class="real-weather">
+                      <span>☁️</span>
+                      <div>
+                        <h3 id="weatherTemp">--°C</h3>
+                        <p id="weatherDesc">Cargando clima...</p>
+                      </div>
+                    </div>
+                    <small id="weatherMeta">Santo Domingo</small>
+                  </article>
+
+                  <article class="real-widget-card">
+                    <div class="real-widget-top">
+                      <strong>Productividad</strong>
+                      <button>···</button>
+                    </div>
+                    <div class="real-productivity">
+                      <div><span>Tiempo enfocado</span><b id="focusTimeValue">0m</b></div>
+                      <div><span>Acciones útiles</span><b id="usefulActionsValue">0</b></div>
+                      <div><span>Meta diaria</span><b id="dailyGoalValue">0%</b></div>
+                    </div>
+                    <div class="real-progress"><span id="productivityProgress" style="width:0%"></span></div>
+                  </article>
+
+                  <article class="real-widget-card">
+                    <div class="real-widget-top">
+                      <strong>Uso del navegador</strong>
+                      <button>···</button>
+                    </div>
+                    <div class="real-usage">
+                      <h3 id="browserUsageTime">0m</h3>
+                      <p id="browserUsageCompare">Sesión actual</p>
+                      <div class="real-bars">
+                        <span></span><span></span><span class="active"></span><span></span><span></span><span></span>
+                      </div>
+                    </div>
+                    <small>UTC-4: <b id="homeTimeStatus">--:--</b></small>
+                  </article>
+                </div>
+              </div>
+
+              <div class="real-shortcuts real-glass-card">
+                <div class="real-section-head">
+                  <div>
+                    <span>Accesos</span>
+                    <h3>Smart Accesos</h3>
+                  </div>
+                  <button class="real-icon-btn" id="realAddShortcutBtn">+</button>
+                </div>
+
+                <div class="quick-grid real-quick-grid">
+                  <button class="quick-card" data-url="https://www.youtube.com">
+                    <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" class="quick-logo" alt="YouTube" />
+                    <div class="quick-title">YouTube</div>
+                    <div class="quick-sub">Videos</div>
+                  </button>
+                  <button class="quick-card" data-url="https://mail.google.com">
+                    <img src="https://www.google.com/s2/favicons?domain=gmail.com&sz=64" class="quick-logo" alt="Gmail" />
+                    <div class="quick-title">Gmail</div>
+                    <div class="quick-sub">Correo</div>
+                  </button>
+                  <button class="quick-card" data-url="https://web.whatsapp.com">
+                    <img src="https://www.google.com/s2/favicons?domain=whatsapp.com&sz=64" class="quick-logo" alt="WhatsApp" />
+                    <div class="quick-title">WhatsApp</div>
+                    <div class="quick-sub">Mensajes</div>
+                  </button>
+                  <button class="quick-card" data-url="https://www.roblox.com">
+                    <img src="https://www.google.com/s2/favicons?domain=roblox.com&sz=64" class="quick-logo" alt="Roblox" />
+                    <div class="quick-title">Roblox</div>
+                    <div class="quick-sub">Juegos</div>
+                  </button>
+                  <button class="quick-card" data-url="https://drive.google.com">
+                    <img src="https://www.google.com/s2/favicons?domain=drive.google.com&sz=64" class="quick-logo" alt="Drive" />
+                    <div class="quick-title">Drive</div>
+                    <div class="quick-sub">Archivos</div>
+                  </button>
+                  <button class="quick-card" data-url="https://calendar.google.com">
+                    <img src="https://www.google.com/s2/favicons?domain=calendar.google.com&sz=64" class="quick-logo" alt="Calendar" />
+                    <div class="quick-title">Calendar</div>
+                    <div class="quick-sub">Agenda</div>
+                  </button>
+                </div>
+              </div>
+
+              <div class="real-media-player real-glass-card">
+                <div class="real-cover"></div>
+                <div class="real-track">
+                  <strong>Astral Drift</strong>
+                  <span>Kairo Nox</span>
+                  <div class="real-track-progress"><span></span></div>
+                </div>
+                <div class="real-player-controls">
+                  <button>⏮</button>
+                  <button class="play">⏯</button>
+                  <button>⏭</button>
+                </div>
+                <button class="real-media-hub">Multimedia Hub</button>
+              </div>
+            </section>
+
+            <aside class="real-right-panel real-glass-card">
+              <div class="real-right-tabs">
+                <button class="active">Notas</button>
+                <button>Descargas</button>
+                <button>Historial</button>
+                <button>Multimedia</button>
+                <button>Herramientas</button>
+              </div>
+
+              <div class="real-note-search">
+                <input type="text" placeholder="Buscar notas..." />
+                <button>＋</button>
+              </div>
+
+              <div class="real-notes-list">
+                <article>
+                  <div><strong>Ideas del proyecto Phoenix</strong><span>10:24 AM</span></div>
+                  <p>• Implementar tema adaptativo con IA<br>• Optimizar programador de recursos<br>• Agregar reglas inteligentes al espacio</p>
+                </article>
+                <article>
+                  <div><strong>Meeting Notas - May 14</strong><span>Yesterday</span></div>
+                  <p>• Revisar ruta Q2<br>• Actualizar sistema de diseño v2<br>• Presupuesto de rendimiento</p>
+                </article>
+                <article>
+                  <div><strong>Personal</strong><span>May 12</span></div>
+                  <p>• Reservar vuelo<br>• Renovar hosting<br>• Leer: El arte del enfoque</p>
+                </article>
+              </div>
+
+              <div class="real-side-section">
+                <div class="real-section-head small">
+                  <strong>Descargas</strong>
+                  <button>Limpiar</button>
+                </div>
+                <div class="real-download-item"><span>Phoenix_Design_System.zip</span><small>245 MB · Done</small></div>
+                <div class="real-download-item"><span>Prototype_V3.mp4</span><small>32.6 MB / 120 MB · 2.4 MB/s</small></div>
+                <div class="real-download-item"><span>Assets_Bundle.webp</span><small>9.3 MB · Done</small></div>
+              </div>
+
+              <div class="real-side-section">
+                <div class="real-section-head small">
+                  <strong>Tab Audio</strong>
+                  <button>Silenciar todo</button>
+                </div>
+                <div class="real-audio-line"><span>Project Phoenix</span><input type="range" value="80" /></div>
+                <div class="real-audio-line"><span>Video - Future of AI</span><input type="range" value="65" /></div>
+                <div class="real-audio-line"><span>Chill Beats Radio</span><input type="range" value="35" /></div>
+              </div>
+            </aside>
+
+          </div>
+        </div>
+
+        <div id="menuHubPanel" class="side-panel hidden">
+          <h2>Apps y herramientas</h2>
+          <p>Todo lo importante de Novex Browser en un solo lugar.</p>
+
+          <div class="menu-hub-hero">
+            <div>
+              <strong>WinGX activo</strong>
+              <span>Windows 11 + Opera GX vibes</span>
+            </div>
+            <button class="settings-action menu-hub-action" data-action="gx-control">Abrir Control GX</button>
+          </div>
+
+          <div class="menu-hub-grid">
+            <div class="menu-hub-card">
+              <h3>🧭 Navegación</h3>
+              <div class="menu-hub-actions">
+                <button class="settings-action menu-hub-action" data-action="home">Inicio</button>
+                <button class="settings-action menu-hub-action" data-action="new-tab">Nueva pestaña</button>
+                <button class="settings-action menu-hub-action" data-action="favorites">Favoritos</button>
+                <button class="settings-action menu-hub-action" data-action="history">Historial</button>
+                <button class="settings-action menu-hub-action" data-action="downloads">Descargas</button>
+              </div>
+            </div>
+
+            <div class="menu-hub-card">
+              <h3>🌐 Apps</h3>
+              <div class="menu-hub-actions">
+                <button class="settings-action menu-hub-action" data-action="whatsapp">WhatsApp</button>
+                <button class="settings-action menu-hub-action" data-action="spotify">Spotify</button>
+                <button class="settings-action menu-hub-action" data-action="roblox">Roblox</button>
+                <button class="settings-action menu-hub-action" data-action="games">Juegos</button>
+              </div>
+            </div>
+
+            <div class="menu-hub-card">
+              <h3>🛠 Herramientas</h3>
+              <div class="menu-hub-actions">
+                <button class="settings-action menu-hub-action" data-action="quick-search">Búsqueda rápida</button>
+                <button class="settings-action menu-hub-action" data-action="tab-manager">Gestor de pestañas</button>
+                <button class="settings-action menu-hub-action" data-action="notes">Notas y tareas</button>
+                <button class="settings-action menu-hub-action" data-action="pip-video">Video flotante</button>
+                <button class="settings-action menu-hub-action" data-action="pro-features">Funciones Pro</button>
+                <button class="settings-action menu-hub-action" data-action="master-center">Centro Maestro</button>
+              </div>
+            </div>
+
+            <div class="menu-hub-card">
+              <h3>⚡ Rendimiento</h3>
+              <div class="menu-hub-actions">
+                <button class="settings-action menu-hub-action" data-action="gx-control">Control GX</button>
+                <button class="settings-action menu-hub-action" data-action="extreme-performance">Rendimiento extremo</button>
+                <button class="settings-action menu-hub-action" data-action="toggle-ram-saver">Ahorro de RAM</button>
+                <button class="settings-action menu-hub-action" data-action="toggle-statusbar">Barra inferior</button>
+              </div>
+            </div>
+
+            <div class="menu-hub-card">
+              <h3>🎨 Personalización</h3>
+              <div class="menu-hub-actions">
+                <button class="settings-action menu-hub-action" data-action="ui-center">Centro UI</button>
+                <button class="settings-action menu-hub-action" data-action="settings">Configuración</button>
+              </div>
+            </div>
+
+            <div class="menu-hub-card">
+              <h3>🛡 Seguridad y datos</h3>
+              <div class="menu-hub-actions">
+                <button class="settings-action menu-hub-action" data-action="security">Seguridad</button>
+                <button class="settings-action menu-hub-action" data-action="cookies">Cookies</button>
+                <button class="settings-action menu-hub-action" data-action="import">Importar datos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="uiCenterPanel" class="side-panel hidden">
+          <h2>Centro UI · Windows 11 + Opera GX</h2>
+          <p>Unifica la elegancia de Windows 11 con la potencia gamer de Opera GX: limpio, premium, personalizable y con actitud.</p>
+
+          <div class="ui-center-layout ui-center-layout-pro">
+            <div class="ui-card ui-card-hero">
+              <div class="ui-card-kicker">Tema híbrido</div>
+              <h3>Win11 GX</h3>
+              <p>Base limpia tipo Windows 11 con blur mica/acrylic, bordes suaves y layout premium, combinado con acentos RGB, control de recursos y look gamer elegante.</p>
+              <div class="ui-preview-browser">
+                <div class="ui-preview-topbar">
+                  <span class="ui-preview-dot"></span>
+                  <span class="ui-preview-dot"></span>
+                  <span class="ui-preview-dot"></span>
+                  <div class="ui-preview-tabs">
+                    <span class="ui-preview-tab active">YouTube</span>
+                    <span class="ui-preview-tab">Trabajo</span>
+                    <span class="ui-preview-tab">Roblox</span>
+                  </div>
+                </div>
+                <div class="ui-preview-shell">
+                  <div class="ui-preview-sidebar"></div>
+                  <div class="ui-preview-main">
+                    <div class="ui-preview-search"></div>
+                    <div class="ui-preview-widgets">
+                      <div></div><div></div><div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-card">
+              <h3>Presets visuales</h3>
+              <p>Elige el estilo base del navegador.</p>
+              <div class="ui-theme-grid pro-theme-grid">
+                <button class="ui-theme-option" data-ui-theme="wingx">
+                  <span class="theme-preview theme-wingx"></span>
+                  Win11 GX
+                </button>
+                <button class="ui-theme-option" data-ui-theme="win11">
+                  <span class="theme-preview theme-win11"></span>
+                  Windows Clean
+                </button>
+                <button class="ui-theme-option" data-ui-theme="gx">
+                  <span class="theme-preview theme-gx"></span>
+                  GX Dark
+                </button>
+                <button class="ui-theme-option" data-ui-theme="night">
+                  <span class="theme-preview theme-night"></span>
+                  Neon Night
+                </button>
+              </div>
+            </div>
+
+            <div class="ui-card">
+              <h3>Color acento</h3>
+              <p>Usa RGB/HEX para darle identidad al navegador.</p>
+              <div class="ui-color-row">
+                <input id="uiAccentColor" type="color" value="#ff2f6d" />
+                <input id="uiAccentHex" class="novex-input" type="text" value="#ff2f6d" maxlength="7" />
+              </div>
+              <div class="ui-accent-swatches">
+                <button class="ui-swatch" data-color="#ff2f6d" style="background:#ff2f6d"></button>
+                <button class="ui-swatch" data-color="#8b5cf6" style="background:#8b5cf6"></button>
+                <button class="ui-swatch" data-color="#00e5ff" style="background:#00e5ff"></button>
+                <button class="ui-swatch" data-color="#6ee7b7" style="background:#6ee7b7"></button>
+                <button class="ui-swatch" data-color="#f59e0b" style="background:#f59e0b"></button>
+              </div>
+            </div>
+
+            <div class="ui-card">
+              <h3>Intensidad visual</h3>
+              <p>Controla blur, transparencia y glow.</p>
+              <label class="ui-field-label" for="uiBlurRange">Blur acrylic</label>
+              <input id="uiBlurRange" type="range" min="4" max="30" value="18" />
+              <div id="uiBlurLabel" class="ui-stat-label">18px</div>
+
+              <label class="ui-field-label" for="uiTransparencyRange">Transparencia</label>
+              <input id="uiTransparencyRange" type="range" min="72" max="100" value="88" />
+              <div id="uiTransparencyLabel" class="ui-stat-label">88%</div>
+
+              <label class="ui-field-label" for="uiGlowRange">Glow</label>
+              <input id="uiGlowRange" type="range" min="0" max="100" value="55" />
+              <div id="uiGlowLabel" class="ui-stat-label">55%</div>
+            </div>
+
+            <div class="ui-card">
+              <h3>Escala y comportamiento</h3>
+              <label class="ui-field-label" for="uiDensitySelect">Tamaño de UI</label>
+              <select id="uiDensitySelect" class="novex-input">
+                <option value="compact">Compacto</option>
+                <option value="normal" selected>Normal</option>
+                <option value="wide">Amplio</option>
+              </select>
+
+              <label class="ui-field-label" for="uiAnimationLevel">Animaciones</label>
+              <select id="uiAnimationLevel" class="novex-input">
+                <option value="off">Off</option>
+                <option value="soft" selected>Suaves</option>
+                <option value="full">Completas</option>
+              </select>
+
+              <label class="ui-field-label" for="uiScaleRange">Escala global</label>
+              <input id="uiScaleRange" type="range" min="90" max="120" value="100" />
+              <div id="uiScaleLabel" class="ui-stat-label">100%</div>
+            </div>
+
+            <div class="ui-card">
+              <h3>Controles rápidos</h3>
+              <div class="ui-controls-grid">
+                <button class="settings-action" id="uiToggleGlassBtn">Blur premium</button>
+                <button class="settings-action" id="uiToggleSidebarBtn">Sidebar compacta</button>
+                <button class="settings-action" id="uiToggleDarkBtn">Modo oscuro</button>
+                <button class="settings-action" id="uiToggleSoundsBtn">Sonidos UI</button>
+              </div>
+              <div class="ui-controls-grid" style="margin-top:10px;">
+                <button class="settings-action" id="uiOpenGxDashboardBtn">Abrir panel GX</button>
+                <button class="settings-action danger-soft" id="uiResetBtn">Restablecer UI</button>
+              </div>
+            </div>
+
+            <div class="ui-card">
+              <h3>Resultado esperado</h3>
+              <ul class="ui-benefit-list">
+                <li>Bordes redondeados suaves tipo Windows 11</li>
+                <li>Blur mica/acrylic con transparencia configurable</li>
+                <li>Acentos RGB estilo Opera GX sin caos visual</li>
+                <li>Controles de recursos con look premium</li>
+                <li>Feedback visual instantáneo y transiciones suaves</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div id="gxControlPanel" class="side-panel hidden">
+          <h2>Control GX</h2>
+          <p>Panel de rendimiento estilo Opera GX: monitoreo, modos y controles visuales.</p>
+
+          <div class="gx-control-layout">
+            <div class="gx-meter-card">
+              <h3>CPU</h3>
+              <div class="gx-ring"><span id="gxCpuValue">--%</span></div>
+              <div class="gx-mini-chart" id="gxCpuChart"></div>
+            </div>
+
+            <div class="gx-meter-card">
+              <h3>RAM</h3>
+              <div class="gx-ring gx-ring-purple"><span id="gxRamValue">--</span></div>
+              <div class="gx-mini-chart" id="gxRamChart"></div>
+            </div>
+
+            <div class="gx-meter-card">
+              <h3>Red</h3>
+              <div class="gx-ring gx-ring-blue"><span id="gxNetValue">Auto</span></div>
+              <div class="gx-mini-chart" id="gxNetChart"></div>
+            </div>
+
+            <div class="gx-control-card">
+              <h3>Limitadores</h3>
+              <label class="ui-label">RAM cap visual</label>
+              <input id="gxRamCap" type="range" min="1" max="16" value="8" />
+              <div id="gxRamCapLabel">8 GB</div>
+
+              <label class="ui-label">CPU cap visual</label>
+              <input id="gxCpuCap" type="range" min="10" max="100" value="80" />
+              <div id="gxCpuCapLabel">80%</div>
+
+              <label class="ui-label">Bandwidth cap visual</label>
+              <input id="gxBandCap" type="range" min="1" max="100" value="25" />
+              <div id="gxBandCapLabel">25 Mbps</div>
+
+              <div class="actions-row">
+                <button class="settings-action" id="gxUltraLatencyBtn">Ultra low latency</button>
+                <button class="settings-action" id="gxPrioritizeActiveBtn">Priorizar pestaña activa</button>
+                <button class="settings-action" id="gxSuspendBackgroundBtn">Suspender background</button>
+              </div>
+            </div>
+
+            <div class="gx-control-card">
+              <h3>Multimedia global</h3>
+              <div class="actions-row">
+                <button class="settings-action" id="gxMuteTodoBtn">Silenciar todo</button>
+                <button class="settings-action" id="gxPipBtn">Video flotante</button>
+                <button class="settings-action" id="gxPauseVideosBtn">Pausar videos</button>
+              </div>
+              <div id="gxMultimediaList" class="gx-media-list">Busca videos activos en tus pestañas.</div>
+            </div>
+
+            <div class="gx-control-card">
+              <h3>Modo activo</h3>
+              <div class="gx-mode-row">
+                <button class="settings-action gx-mode-btn" data-gx-mode="balanced">Balanceado</button>
+                <button class="settings-action gx-mode-btn" data-gx-mode="gaming">Gaming</button>
+                <button class="settings-action gx-mode-btn" data-gx-mode="focus">Focus</button>
+                <button class="settings-action gx-mode-btn" data-gx-mode="battery">Batería</button>
+              </div>
+              <div id="gxModeStatus" class="empty-box">Modo balanceado.</div>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div id="extremePerformancePanel" class="side-panel hidden">
+          <h2>Rendimiento extremo</h2>
+          <p>Optimiza páginas pesadas con modos rápidos, diagnóstico y reglas visuales por dominio.</p>
+
+          <div class="extreme-dashboard">
+            <div class="extreme-stat-card">
+              <span>Modo activo</span>
+              <strong id="extremeModeStatus">Balanceado</strong>
+            </div>
+            <div class="extreme-stat-card">
+              <span>FPS estimado</span>
+              <strong id="extremeFpsValue">--</strong>
+            </div>
+            <div class="extreme-stat-card">
+              <span>DOM actual</span>
+              <strong id="extremeDomValue">--</strong>
+            </div>
+          </div>
+
+          <div class="extreme-layout">
+            <div class="extreme-card">
+              <h3>Modos rápidos</h3>
+              <div class="extreme-actions">
+                <button class="settings-action" id="extremeModeBtn">Activar rendimiento extremo</button>
+                <button class="settings-action" id="ultraLowPowerBtn">Modo ultra bajo consumo</button>
+                <button class="settings-action" id="dataMinimumBtn">Modo datos mínimos</button>
+                <button class="settings-action" id="visibleOnlyBtn">Modo solo lo visible</button>
+                <button class="settings-action" id="fastReadBtn">Modo lectura rápida</button>
+                <button class="settings-action danger-soft" id="clearExtremeBtn">Quitar optimizaciones</button>
+              </div>
+            </div>
+
+            <div class="extreme-card">
+              <h3>Optimización manual</h3>
+              <div class="extreme-switches">
+                <label><input type="checkbox" id="disableHeavyCssToggle" /> Desactivar CSS pesado</label>
+                <label><input type="checkbox" id="removeAnimationsToggle" /> Eliminar animaciones CSS</label>
+                <label><input type="checkbox" id="disableAutoplayToggle" /> Desactivar autoplay global</label>
+                <label><input type="checkbox" id="lazyImagesToggle" /> Cargar imágenes en baja prioridad</label>
+                <label><input type="checkbox" id="reduceBackgroundToggle" /> Reducir consumo en segundo plano</label>
+                <label><input type="checkbox" id="mobileSitesToggle" /> Forzar versión móvil del sitio actual</label>
+              </div>
+
+              <div class="actions-row">
+                <button class="settings-action" id="applyManualPerfBtn">Aplicar al sitio actual</button>
+                <button class="settings-action" id="savePerfRuleBtn">Guardar regla por dominio</button>
+              </div>
+            </div>
+
+            <div class="extreme-card">
+              <h3>Diagnóstico y cuellos de botella</h3>
+              <div class="actions-row">
+                <button class="settings-action" id="runPerfDiagnosticBtn">Diagnosticar página</button>
+                <button class="settings-action" id="rankHeavyTabsBtn">Ranking de pestañas pesadas</button>
+                <button class="settings-action" id="applyProgressiveOptBtn">Optimización automática progresiva</button>
+              </div>
+              <div id="perfDiagnosticBox" class="diagnostic-box">Presiona diagnosticar para analizar la pestaña actual.</div>
+            </div>
+
+            <div class="extreme-card">
+              <h3>Perfiles de rendimiento</h3>
+              <div class="gx-mode-row">
+                <button class="settings-action perf-profile-btn" data-perf-profile="ultra">Ultra rápido</button>
+                <button class="settings-action perf-profile-btn" data-perf-profile="stable">Estable</button>
+                <button class="settings-action perf-profile-btn" data-perf-profile="balanced">Balanceado</button>
+                <button class="settings-action perf-profile-btn" data-perf-profile="laptop">Laptop</button>
+              </div>
+              <div id="perfRulesList" class="mini-list">Sin reglas guardadas todavía.</div>
+            </div>
+
+            <div class="extreme-card extreme-wide">
+              <h3>Funciones avanzadas agregadas como base</h3>
+              <div class="extreme-feature-list">
+                <span>Limitar uso de GPU por pestaña</span>
+                <span>Ajustar FPS dinámicamente</span>
+                <span>Control de recursos por dominio</span>
+                <span>Detectar cuello CPU/GPU</span>
+                <span>Optimizar fuentes pesadas</span>
+                <span>Limitar requests simultáneos</span>
+                <span>Cachear scripts localmente</span>
+                <span>Priorizar interacción sobre carga</span>
+                <span>Ajuste dinámico según hardware</span>
+                <span>Feedback de rendimiento</span>
+              </div>
+              <p class="extreme-note">Estas funciones quedan preparadas como base/roadmap. Algunas requieren integración nativa o permisos más profundos para control real.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="favoritesPanel" class="side-panel hidden">
+          <h2>Favoritos</h2>
+          <p>Tus páginas guardadas aparecerán aquí.</p>
+          <div id="favoritesList" class="panel-list"></div>
+        </div>
+
+        <div id="historyPanel" class="side-panel hidden">
+          <h2>Historial</h2>
+          <p>Páginas visitadas recientemente.</p>
+          <div id="historyList" class="panel-list"></div>
+        </div>
+
+        <div id="downloadsPanel" class="side-panel hidden">
+          <h2>Descargas</h2>
+          <p>Las descargas se guardan usando Electron.</p>
+          <div class="empty-box">↓ Las descargas aparecerán en la carpeta de descargas de Windows.</div>
+        </div>
+
+        <div id="gamesPanel" class="side-panel hidden">
+          <h2>Centro Gamer</h2>
+          <p>Accesos rápidos para juegos y plataformas gamer.</p>
+          <div class="panel-list">
+            <div class="panel-item launch-url" data-url="https://store.steampowered.com">
+              <div class="panel-item-title">Steam</div>
+              <div class="panel-item-url">https://store.steampowered.com</div>
+            </div>
+            <div class="panel-item launch-url" data-url="https://www.epicgames.com/store">
+              <div class="panel-item-title">Epic Games Store</div>
+              <div class="panel-item-url">https://www.epicgames.com/store</div>
+            </div>
+            <div class="panel-item launch-url" data-url="https://www.roblox.com">
+              <div class="panel-item-title">Roblox</div>
+              <div class="panel-item-url">https://www.roblox.com</div>
+            </div>
+            <div class="panel-item launch-url" data-url="https://discord.com/app">
+              <div class="panel-item-title">Discord Web</div>
+              <div class="panel-item-url">https://discord.com/app</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="securityPanel" class="side-panel hidden">
+          <h2>Seguridad</h2>
+          <p>Consejos y herramientas visuales de seguridad para navegar mejor.</p>
+
+          <div class="security-grid">
+            <div class="security-card">
+              <div class="security-icon">🛡</div>
+              <div>
+                <h3>Navegación segura</h3>
+                <p>Evita entrar datos personales en páginas desconocidas o sin candado.</p>
+              </div>
+            </div>
+
+            <div class="security-card">
+              <div class="security-icon">🔒</div>
+              <div>
+                <h3>HTTPS recomendado</h3>
+                <p>Prefiere páginas que comiencen con https:// para mayor protección.</p>
+              </div>
+            </div>
+
+            <div class="security-card">
+              <div class="security-icon">🍪</div>
+              <div>
+                <h3>Sistema de cookies</h3>
+                <p>Novex conserva cookies para que puedas mantener sesiones iniciadas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="settingsPanel" class="side-panel hidden">
+          <h2>Configuración</h2>
+          <p>Ajustes básicos de Novex Browser.</p>
+
+          <div class="settings-list">
+            <button class="settings-action" id="clearHistorialBtn">Borrar historial</button>
+            <button class="settings-action" id="clearFavoritesBtn">Borrar favoritos</button>
+            <button class="settings-action" id="openImportBtnSettings">Importar datos de navegador anterior</button>
+            <button class="settings-action" id="openCookiesBtnSettings">Sistema de cookies</button>
+            <button class="settings-action" id="toggleStatusbarBtn">Ocultar barra inferior</button>
+            <button class="settings-action" id="toggleRamSaverBtn">Activar ahorro de RAM</button>
+            <button class="settings-action" id="toggleBatterySaverBtn">Activar ahorro de batería</button>
+            <button class="settings-action" id="openProFeaturesBtn">Ver funciones Pro</button>
+          </div>
+
+          <div class="empty-box" id="settingsMessage">
+            Los cambios se guardan localmente en este navegador.
+          </div>
+        </div>
+
+        <div id="profilePanel" class="side-panel hidden">
+          <h2>Perfil Novex</h2>
+          <p>Área de perfil local del navegador.</p>
+          <div class="profile-card">
+            <img src="assets/novex-logo.png" alt="Novex Logo" />
+            <div>
+              <h3>Usuario Novex</h3>
+              <p>Perfil local sin sincronización en la nube.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="importPanel" class="side-panel hidden">
+          <h2>Importar datos</h2>
+          <p>Selecciona tu navegador anterior y Novex intentará traer tus favoritos automáticamente.</p>
+
+          <div class="import-box">
+            <h3>Seleccionar navegador</h3>
+            <p>Novex buscará los favoritos guardados en ese navegador instalado en esta computadora.</p>
+
+            <select id="browserImportSelect" class="novex-input">
+              <option value="chrome">Google Chrome</option>
+              <option value="edge">Microsoft Edge</option>
+              <option value="brave">Brave</option>
+              <option value="opera">Opera</option>
+              <option value="operagx">Opera GX</option>
+            </select>
+
+            <div class="actions-row">
+              <button class="settings-action" id="importBrowserBtn">Importar desde navegador seleccionado</button>
+            </div>
+
+            <div id="importResult" class="empty-box">
+              Selecciona un navegador y presiona importar.
+            </div>
+          </div>
+        </div>
+
+        <div id="cookiesPanel" class="side-panel hidden">
+          <h2>Sistema de cookies</h2>
+          <p>Administra las cookies y datos guardados por los sitios.</p>
+
+          <div class="cookies-card">
+            <h3>Cookies persistentes</h3>
+            <p>Novex Browser guarda cookies para que tus sesiones sigan al cerrar y abrir el navegador.</p>
+
+            <div class="cookie-stats">
+              <div>
+                <span>Cookies</span>
+                <strong id="cookieTotal">0</strong>
+              </div>
+              <div>
+                <span>Dominios</span>
+                <strong id="cookieDomains">0</strong>
+              </div>
+            </div>
+
+            <div class="actions-row">
+              <button class="settings-action" id="refreshCookiesBtn">Actualizar conteo</button>
+              <button class="settings-action danger-soft" id="clearCookiesBtn">Borrar cookies</button>
+              <button class="settings-action danger-soft" id="clearSiteDataBtn">Borrar datos de sitios</button>
+            </div>
+
+            <div id="cookiesMessage" class="empty-box">
+              Las cookies se guardan en la sesión persistente de Novex.
+            </div>
+          </div>
+        </div>
+
+        
+        <div id="quickSearchPanel" class="side-panel hidden">
+          <h2>Búsqueda rápida</h2>
+          <p>Busca desde la barra lateral en varios servicios.</p>
+          <div class="tool-card">
+            <input id="quickSearchInput" class="novex-input" type="text" placeholder="Escribe lo que quieres buscar..." />
+            <div class="actions-row">
+              <button class="settings-action quick-search-engine" data-engine="google">Google</button>
+              <button class="settings-action quick-search-engine" data-engine="youtube">YouTube</button>
+              <button class="settings-action quick-search-engine" data-engine="wikipedia">Wikipedia</button>
+              <button class="settings-action quick-search-engine" data-engine="roblox">Roblox</button>
+              <button class="settings-action quick-search-engine" data-engine="spotify">Spotify</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="tabManagerPanel" class="side-panel hidden">
+          <h2>Administrador de pestañas</h2>
+          <p>Organiza, cierra, agrupa y revisa tus pestañas abiertas.</p>
+          <div class="actions-row">
+            <button class="settings-action" id="refreshTabManagerBtn">Actualizar lista</button>
+            <button class="settings-action" id="groupTabsBtn">Agrupar por tema/dominio</button>
+            <button class="settings-action danger-soft" id="closeInactiveTabsBtn">Cerrar pestañas inactivas</button>
+          </div>
+          <div id="tabManagerList" class="panel-list"></div>
+        </div>
+
+        <div id="notesPanel" class="side-panel hidden">
+          <h2>Notas y tareas</h2>
+          <p>Notas rápidas vinculadas a tu navegador.</p>
+          <div class="tool-card">
+            <textarea id="quickNotasArea" class="novex-textarea" placeholder="Escribe tus notas aquí..."></textarea>
+            <div class="actions-row">
+              <button class="settings-action" id="saveNotasBtn">Guardar notas</button>
+              <button class="settings-action danger-soft" id="clearNotasBtn">Borrar notas</button>
+            </div>
+          </div>
+          <div class="tool-card">
+            <h3>Lista de tareas</h3>
+            <div class="todo-row">
+              <input id="todoInput" class="novex-input" type="text" placeholder="Nueva tarea..." />
+              <button class="settings-action" id="addTodoBtn">Agregar</button>
+            </div>
+            <div id="todoList" class="todo-list"></div>
+          </div>
+        </div>
+
+        <div id="proFeaturesPanel" class="side-panel hidden">
+          <h2>Funciones Pro</h2>
+          <p>Centro de control para las ideas nuevas de Novex Browser.</p>
+          <div class="feature-grid" id="featureGrid"></div>
+        </div>
+
+        <div id="summaryPanel" class="side-panel hidden">
+          <h2>Resumen rápido</h2>
+          <p>Resumen local de la página actual. Para resumen con IA real se necesitaría conectar un servicio de IA.</p>
+          <div class="tool-card">
+            <div id="summaryResult" class="summary-box">Presiona “Resumen rápido” desde el menú de 3 puntos.</div>
+          </div>
+        </div>
+
+        <div id="screenshotPanel" class="side-panel hidden">
+          <h2>Captura de pantalla</h2>
+          <p>Vista previa de la captura del sitio actual.</p>
+          <div class="tool-card">
+            <div class="actions-row">
+              <button class="settings-action" id="captureAgainBtn">Tomar captura otra vez</button>
+            </div>
+            <img id="screenshotPreview" class="screenshot-preview" alt="Captura" />
+          </div>
+        </div>
+
+        
+        <div id="masterCenterPanel" class="side-panel hidden">
+          <h2>Centro Maestro 5.0</h2>
+          <p>Todas tus ideas nuevas organizadas en un roadmap maestro por categorías. Algunas están como base local y otras como visión avanzada.</p>
+
+          <div class="master-dashboard">
+            <div class="master-stat-card">
+              <strong id="masterTotalIdeas">0</strong>
+              <span>ideas organizadas</span>
+            </div>
+            <div class="master-stat-card">
+              <strong id="masterCategoriesCount">0</strong>
+              <span>categorías</span>
+            </div>
+            <div class="master-stat-card">
+              <strong>5.0</strong>
+              <span>roadmap maestro</span>
+            </div>
+          </div>
+
+          <div class="master-controls">
+            <input id="masterSearchInput" class="novex-input" type="text" placeholder="Buscar idea, categoría o función..." />
+            <select id="masterCategorySelect" class="novex-input">
+              <option value="all">Todas las categorías</option>
+            </select>
+          </div>
+
+          <div class="master-actions">
+            <button class="settings-action" id="masterShowImplementedBtn">Ver base implementable</button>
+            <button class="settings-action" id="masterShowFutureBtn">Ver visión futura</button>
+            <button class="settings-action" id="masterExportBtn">Exportar resumen del roadmap</button>
+          </div>
+
+          <div id="masterRoadmapGrid" class="master-roadmap-grid"></div>
+        </div>
+
+        <div id="moreMenu" class="more-menu hidden">
+          <button id="menuNewTab">Nueva pestaña</button>
+          <button id="menuMasterCenter">Centro Maestro 5.0</button>
+          <button id="menuImport">Importar datos de navegador anterior</button>
+          <button id="menuCookies">Sistema de cookies</button>
+          <button id="menuReadMode">Modo lectura limpio</button>
+          <button id="menuTranslatePage">Traducir página</button>
+          <button id="menuLocalSummary">Resumen rápido</button>
+          <button id="menuTemporaryTab">Pestaña temporal</button>
+          <button id="menuIncognitoTab">Nueva pestaña incógnita</button>
+          <button id="menuTabManager">Administrador de pestañas</button>
+          <button id="menuFocusMode">Modo concentrado</button>
+          <button id="menuMuteTab">Silenciar pestaña</button>
+          <button id="menuPipVideo">Video flotante</button>
+          <button id="menuScreenshot">Captura de pantalla</button>
+          <button id="menuProFeatures">Funciones Pro</button>
+          <button id="menuToggleStatusbar">Ocultar barra inferior</button>
+          <button id="menuToggleRamSaver">Activar ahorro de RAM</button>
+          <button id="menuFavorites">Ver favoritos</button>
+          <button id="menuHistorial">Ver historial</button>
+          <button id="menuSettings">Configuración</button>
+        </div>
+
+        <div id="webviewsContainer"></div>
+
+      </section>
+
+      <div class="statusbar" id="statusbar">
+        <div id="cpuStatus">CPU: --%</div>
+        <div id="ramStatus">RAM: --</div>
+        <div id="appRamStatus">Novex: --</div>
+        <div id="timeStatus">UTC-4: --:--</div>
+        <div id="batterySaverStatus">Batería: OFF</div>
+        <div class="status-actions">
+          <span id="ramSaverStatus">RAM normal</span>
+          <button id="hideStatusbarQuick" class="status-hide-btn" title="Ocultar barra inferior">×</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+  <script src="wingx-ui.js"></script>
+</body>
+</html>

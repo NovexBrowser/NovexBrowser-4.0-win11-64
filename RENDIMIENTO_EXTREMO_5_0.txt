@@ -1,0 +1,24 @@
+Botón Rendimiento extremo agregado.
+
+Incluye:
+- Botón ⚡ Rendimiento extremo en Apps y herramientas
+- Acceso desde Centro rápido
+- Panel propio de Rendimiento extremo
+- Modo rendimiento extremo
+- Modo ultra bajo consumo
+- Modo datos mínimos
+- Modo solo lo visible
+- Modo lectura rápida
+- Desactivar CSS pesado
+- Eliminar animaciones CSS
+- Desactivar autoplay global
+- Carga de imágenes en baja prioridad
+- Forzar versión móvil del sitio actual
+- Diagnóstico de cuellos de botella
+- Ranking de pestañas más pesadas
+- Optimización automática progresiva
+- Perfiles: ultra rápido, estable, balanceado, laptop
+- Medidor FPS estimado
+- Reglas por dominio
+
+Nota: limitar GPU real por pestaña, cachear scripts localmente y limitar requests simultáneos quedan como base/roadmap porque requieren integración nativa más profunda.

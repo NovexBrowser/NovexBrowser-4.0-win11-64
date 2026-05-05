@@ -1,0 +1,12 @@
+UI mejorada final aplicada.
+
+Cambios:
+- Pantalla principal reconstruida y HTML corregido.
+- Estilo WinGX Premium más fuerte y visible.
+- Barra lateral compacta real con un solo botón de Apps/Herramientas.
+- Cards tipo Windows 11 con blur/mica.
+- Tabs flotantes más limpias con línea glow.
+- Toolbar más compacta y moderna.
+- Nueva home con hero, búsqueda central, accesos rápidos y dashboard.
+- Paneles más limpios y consistentes.
+- Botones del dashboard corregidos.

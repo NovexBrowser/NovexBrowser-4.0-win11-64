@@ -1,0 +1,14 @@
+Logo nuevo aplicado.
+
+Archivos reemplazados:
+- assets/novex-logo.png
+- assets/novex-logo.ico
+
+También se agregó:
+- assets/novex-logo-new-2026.png
+
+Este logo se usa en:
+- barra lateral
+- pestañas
+- pantalla principal
+- icono de ventana/instalador cuando Electron use novex-logo.ico

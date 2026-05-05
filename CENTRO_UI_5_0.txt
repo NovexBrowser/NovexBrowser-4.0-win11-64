@@ -1,0 +1,10 @@
+Centro UI agregado a NovexBrowser 5.0.
+
+Incluye:
+- Temas Novex Neon, Cyberpunk, Minimal, Oficina y Noche
+- Modo compacto
+- Efecto glass/neón ON/OFF
+- Animaciones ON/OFF
+- Sidebar plegable
+- Escala global 90% a 120%
+- Botón desde Apps/Herramientas y desde Centro rápido

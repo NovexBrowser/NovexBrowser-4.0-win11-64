@@ -1,0 +1,1 @@
+Se agregó la opción "Video flotante" dentro del Centro rápido, en la sección Herramientas (apps y herramientas).\n

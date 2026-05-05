@@ -1,0 +1,1 @@
+El botón de 3 puntos ahora abre una pestaña interna llamada Centro rápido con todas las opciones principales del navegador agrupadas por categorías.

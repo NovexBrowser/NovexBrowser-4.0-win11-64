@@ -1,0 +1,22 @@
+WinGX UI agregado.
+
+Incluye:
+- Tema WinGX Premium estilo Windows 11 + Opera GX
+- Acrílico/Mica visual con blur configurable
+- Bordes redondeados suaves
+- Tabs flotantes con línea glow
+- Color acento RGB/HEX
+- Intensidad de glow
+- Nivel de blur
+- Transparencia
+- Animaciones off/suaves/completas
+- Sonidos UI opcionales
+- Dashboard gamer en nueva pestaña
+- GX Control con CPU/RAM/red visual
+- Limitadores visuales RAM/CPU/bandwidth
+- Silenciar todo
+- Pausar videos
+- Video flotante
+- Modos Balanceado/Gaming/Focus/Batería
+
+Nota: los caps de RAM/CPU/red son visuales/base. El control real profundo requiere integración nativa avanzada.

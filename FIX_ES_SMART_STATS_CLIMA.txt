@@ -1,0 +1,10 @@
+Corrección aplicada:
+
+- Dashboard traducido al español.
+- Smart Shortcuts ahora abren páginas con clic real.
+- Hora cambiada a formato 12 horas AM/PM en UTC-4.
+- CPU/RAM/Novex se actualizan directo con novexSystem.
+- Se agregó GPU como tarjeta separada. Si Electron no reporta proceso GPU, muestra N/D.
+- Clima intenta leer Santo Domingo con wttr.in y tiene respaldo si no hay internet.
+- Uso del navegador cuenta la sesión actual.
+- Productividad muestra tiempo enfocado, acciones útiles y meta diaria.

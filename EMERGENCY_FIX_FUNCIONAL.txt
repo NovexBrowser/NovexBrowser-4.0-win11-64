@@ -1,0 +1,11 @@
+Versión de emergencia funcional.
+
+Qué se corrigió:
+- Se restauraron los IDs reales que renderer.js necesita.
+- Los botones internos siguen existiendo para que JS no falle.
+- Visualmente quedan ocultos dentro de Apps/Herramientas.
+- El botón 🧩 abre Centro rápido.
+- wingx-ui.js ya no borra botones ni rompe eventos.
+- Se priorizó que todo vuelva a funcionar antes de seguir embelleciendo la UI.
+
+Usa esta versión para probar funcionalidad.

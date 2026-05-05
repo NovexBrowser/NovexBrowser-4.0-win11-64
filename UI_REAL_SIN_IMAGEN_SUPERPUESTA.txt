@@ -1,0 +1,10 @@
+UI real aplicada.
+
+Esta versión NO usa la imagen como interfaz superpuesta.
+Se rehizo el dashboard en HTML/CSS real:
+- Panel izquierdo GX Control real
+- Panel central con búsqueda, chips, widgets, shortcuts y media player
+- Panel derecho con notas, descargas y audio
+- Sidebar funcional y compacta
+- IDs conservados para que renderer.js no se rompa
+- wingx-ui.js no borra elementos ni rompe eventos

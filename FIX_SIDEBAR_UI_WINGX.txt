@@ -1,0 +1,9 @@
+Corrección aplicada:
+
+- La barra lateral ahora queda limpia.
+- Se quitaron los botones sueltos del grupo desplegable.
+- Solo queda un botón: 🧩 Apps y herramientas.
+- Ese botón abre el Centro rápido con todas las opciones por categorías.
+- WinGX queda activo por defecto.
+- UI reforzada con estilo Windows 11 + Opera GX:
+  tabs flotantes, blur, mica/acrylic, glow, cards, barra lateral compacta.

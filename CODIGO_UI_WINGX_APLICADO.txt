@@ -1,0 +1,18 @@
+Se aplicó la UI en código real.
+
+Archivos nuevos:
+- wingx-ui.css
+- wingx-ui.js
+
+index.html fue modificado para cargar:
+<link rel="stylesheet" href="wingx-ui.css" />
+<script src="wingx-ui.js"></script>
+
+La sidebar queda comprimida por código real:
+- Solo se muestra el botón 🧩 Apps y herramientas.
+- El contenedor toolsGroupContainer queda vacío y oculto.
+- El botón 🧩 abre el Centro rápido.
+
+La UI WinGX queda forzada por código:
+- body usa clase wingx-code-ui.
+- CSS aplica Windows 11 + Opera GX de forma directa.

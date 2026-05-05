@@ -1,0 +1,1 @@
+UI actualizada con estilo Windows 11 + Opera GX. Incluye: tema híbrido Win11 GX, acentos RGB/HEX, blur/transparencia/glow configurables, tamaños de UI, animaciones, sonidos UI opcionales, dashboard visual y panel de recursos integrado.

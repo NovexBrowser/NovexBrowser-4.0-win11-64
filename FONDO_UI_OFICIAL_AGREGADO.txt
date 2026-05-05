@@ -1,0 +1,10 @@
+Se agregó la imagen de UI oficial al ZIP.
+
+Cambios reales:
+- assets/ui-bg.png
+- wingx-ui.css actualizado
+- index.html asegura la carga de wingx-ui.css
+- La imagen queda como fondo del dashboard/home con blur, glass y glow.
+
+Nota:
+La imagen se aplica como fondo visual del dashboard. Las tarjetas y controles reales siguen siendo HTML/CSS encima.

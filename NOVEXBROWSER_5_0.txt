@@ -1,0 +1,35 @@
+NovexBrowser 5.0
+
+Versión interna: 5.0.0
+Nombre visual: Novex Browser
+
+Se agregaron las ideas subidas por el usuario en un Centro Maestro 5.0.
+
+Resumen:
+- Ideas organizadas: 700
+- Categorías: 15
+- Archivos originales incluidos:
+  - NOVEX_IDEAS_ORIGINALES_5_0.txt
+  - NOVEX_ROADMAP_5_0_ORGANIZADO.json
+
+El Centro Maestro 5.0 separa:
+- Base local implementable
+- Base IA / requiere API avanzada
+- Requiere hardware/servidor
+- Roadmap futuro
+
+
+
+
+CORRECCIÓN:
+- Se quitaron las ideas de relleno 1501–3000 porque no eran ideas reales.
+- El Centro Maestro conserva las ideas útiles anteriores.
+
+
+ACTUALIZACIÓN IDEAS REALES:
+- Se agregaron 781 ideas reales organizadas por categorías.
+- No se incluyeron las ideas de relleno 1501–3000.
+- Se agregaron archivos:
+  - IDEAS_REALES_CATEGORIZADAS_5_0.txt
+  - IDEAS_REALES_CATEGORIZADAS_5_0.json
+- Las categorías aparecen como "5.0 Real - ..." dentro del Centro Maestro.

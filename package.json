@@ -1,0 +1,37 @@
+{
+  "name": "novex-browser",
+  "version": "5.0.0",
+  "description": "Novex Browser 5.0 - Centro Maestro de IA, productividad, seguridad, automatización y roadmap avanzado",
+  "main": "main.js",
+  "author": "Novex",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.novex.browser",
+    "productName": "Novex Browser",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "icon": "assets/novex-logo.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Novex Browser"
+    }
+  }
+}

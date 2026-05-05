@@ -1,0 +1,8 @@
+Corrección aplicada:
+
+- La pantalla de inicio ahora queda encima del webview cuando está visible.
+- El webview no bloquea clics en la home.
+- Smart Shortcuts abren páginas con delegación global.
+- El botón de búsqueda del dashboard funciona.
+- Enter en el buscador de inicio funciona.
+- Overlays/pseudo-elementos no bloquean clics.
